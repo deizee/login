@@ -1,7 +1,7 @@
-const UI = {
-    form: document.forms['loginForm'],
+const login_UI = {
+    loginForm: document.forms['loginForm'],
     inputEmail: document.getElementById('email'),
     inputPassword: document.getElementById('password'),
 }
 
-export default UI;
+export default login_UI;

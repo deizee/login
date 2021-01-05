@@ -1,59 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="login-page-wrapp d-flex">
-      <div class="login-form-wrap d-flex align-items-center">
-        <div class="form-card card ml-auto">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#login" role="tab" aria-controls="home"
+        aria-selected="true">Login</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#register" role="tab" aria-controls="profile"
+        aria-selected="false">Register</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
+
+      <div class="login-page-wrapp d-flex">
+        <div class="login-form-wrap d-flex align-items-center">
+
+          <div class="form-card card ml-auto">
+            <div class="card-body">
+              <h4 class="card-title">Please Login</h4>
+              <form name="loginForm">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="Enter email" data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password"
+                    data-required="password" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- /.login-form-wrap -->
+        <div class="login-greeting-screen d-flex align-items-center">
+          <div class="login-greeting-screen-text">
+            <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+            <p class="login-greeting-screen-description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              inventore non accusantium earum, illo dolores reprehenderit laborum
+              ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+              ipsa exercitationem eaque totam. A.
+            </p>
+          </div>
+        </div>
+        <!-- /.login-greeting-screen -->
+      </div>
+      <!-- /.login-page-wrapp -->
+
+    </div>
+    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="profile-tab">
+
+
+      <div class="d-flex align-items-center">
+        <div class="register-form-card card form-card" style="width: 50rem;">
           <div class="card-body">
-            <h4 class="card-title">Please Login</h4>
-            <form name="loginForm">
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  data-required="email"
-                  data-invalid-message="Please provide valid email example@example.com"
-                />
+            <h4 class="card-title" style="color: gray;">Please Register</h4>
+            <form name="registerForm">
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" data-required="email"
+                         data-invalid-message="Please provide valid email example@example.com">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPhone">Phone</label>
+                  <input type="tel" class="form-control" id="inputPhone">
+                </div>
               </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  data-required="password"
-                />
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputPassword">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" data-required="password">
+                </div>
+                <div class="form-group col-md-6">
+                  <legend class="col-form-label pt-0">Gender</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                      <label class="form-check-label" for="male">
+                        Male
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                      <label class="form-check-label" for="female">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputNickname">Nickname</label>
+                  <input type="text" class="form-control" id="inputNickname">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="selectCountry">Country</label>
+                  <select id="selectCountry" class="form-control">
+                    <option selected>Choose...</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputFirstName">First name</label>
+                  <input type="text" class="form-control" id="inputFirstName">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="selectCity">City</label>
+                  <select id="selectCity" class="form-control" disabled="disabled">
+                    
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputLastName">Last name</label>
+                  <input type="text" class="form-control" id="inputLastName">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputBirthDate">Date of Birthday</label>
+                  <input type="date" id="inputBirthDate" class="form-control"></input>
+                </div>
+              </div>
+
               <button type="submit" class="btn btn-primary">Submit</button>
+
             </form>
           </div>
         </div>
       </div>
-      <!-- /.login-form-wrap -->
-      <div class="login-greeting-screen d-flex align-items-center">
-        <div class="login-greeting-screen-text">
-          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
-          <p class="login-greeting-screen-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            inventore non accusantium earum, illo dolores reprehenderit laborum
-            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
-            ipsa exercitationem eaque totam. A.
-          </p>
-        </div>
-      </div>
-      <!-- /.login-greeting-screen -->
+
     </div>
-    <!-- /.login-page-wrapp -->
-  </body>
+  </div>
+
+</body>
+
 </html>

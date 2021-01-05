@@ -14,7 +14,7 @@ export async function login(email, password) {
 
         console.log(response);
         return response.data;
-    } catch (error) {
+    } catch (err) {
         console.log(err);
         return Promise.reject(err);
     }

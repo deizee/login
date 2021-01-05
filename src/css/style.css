@@ -38,3 +38,8 @@
 .login-greeting-screen .login-greeting-screen-description {
   line-height: 1.4;
 }
+
+.register-form-card {
+  width: 100%;
+  margin: 100px auto;
+}
